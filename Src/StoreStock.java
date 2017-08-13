@@ -1,0 +1,96 @@
+/* A stock file class to act like an inventory,
+ * all the items that are in the supplement store are in it
+ * itll be used to search for an item that the customer is searching for
+ */
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class StoreStock{
+ 	
+ 	private LinkedList stock;
+ 	
+ 	public StoreStock()
+ 	{
+ 		stock = new LinkedList();
+ 	}
+ 	public void addStock(int ProductCode,String Flavour,String Type,String Brand,String Function)
+ 	{
+ 		Supplement supplement = new Supplement(ProductCode, Flavour, Type, Brand, Function);
+		stock.add(supplement);
+ 	}
+
+ 	public Supplement searchStock(Supplement wantedStock)
+	{
+		Iterator i = stock.iterator();
+		while(i.hasNext())
+		{
+			Supplement s = (Supplement)i.next();
+			if(s.getProductCode() == wantedStock.getProductCode())
+			{
+				return wantedStock;
+			}
+		}
+		return null;
+	}
+	public String searchFlavour(Supplement wantedFlavour)
+	{
+		Iterator i = stock.iterator();
+		while(i.hasNext())
+		{
+			String x = "";
+			Supplement s = (Supplement)i.next();
+			if(s.getFlavour().equals(wantedFlavour.getFlavour()))
+			{
+				x += "\n" + s.toString();
+				return x;
+			}
+		}
+		return "Supplement Flavour not Found";
+	}
+	public String searchBrand(Supplement wantedBrand)
+	{
+		String x = "";
+		Iterator i = stock.iterator();
+		while(i.hasNext())
+		{
+			Supplement s = (Supplement)i.next();
+			if(s.getBrand().equals(wantedBrand.getBrand()))
+			{
+				x += "\n" + s.toString();
+				return x;
+			}
+		}
+		return "Brand of Supplement not Found";
+	}
+	public String searchType(Supplement wantedType)
+	{
+		String x = "";
+		Iterator i = stock.iterator();
+		while(i.hasNext())
+		{
+			Supplement s = (Supplement)i.next();
+			if(s.getType().equals(wantedType.getType()))
+			{
+				x += "\n" + s.toString();
+				return x;
+			}
+		}
+		return "Type of Supplement not Found";
+	}
+	public String searchFunction(Supplement wantedFunction)
+	{
+		String x = "";
+		Iterator i = stock.iterator();
+		while(i.hasNext())
+		{
+			Supplement s = (Supplement)i.next();
+			if(s.getType().equals(wantedFunction.getType()))
+			{
+				x += "\n" + s.toString();
+				return x;
+			}
+		}
+		return "Type of Function not Found";
+	}
+
+ }
