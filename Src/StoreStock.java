@@ -7,11 +7,11 @@ import java.util.LinkedList;
 
 public class StoreStock{
  	
- 	private LinkedList stock;
+ 	private LinkedList<Supplement> stock = new LinkedList<Supplement>();
  	
  	public StoreStock()
  	{
- 		stock = new LinkedList();
+
  	}
  	public void addStock(int ProductCode,String Flavour,String Type,String Brand,String Function)
  	{
@@ -21,27 +21,23 @@ public class StoreStock{
 
  	public Supplement searchStock(Supplement wantedStock)
 	{
-		Iterator i = stock.iterator();
-		while(i.hasNext())
+		for(Supplement a:stock)
 		{
-			Supplement s = (Supplement)i.next();
-			if(s.getProductCode() == wantedStock.getProductCode())
+			if(a.getProductCode() == wantedStock.getProductCode())
 			{
-				return wantedStock;
+				return a;
 			}
 		}
 		return null;
 	}
 	public String searchFlavour(Supplement wantedFlavour)
 	{
-		Iterator i = stock.iterator();
-		while(i.hasNext())
+		String x = "";
+		for(Supplement a:stock)
 		{
-			String x = "";
-			Supplement s = (Supplement)i.next();
-			if(s.getFlavour().equals(wantedFlavour.getFlavour()))
+			if(a.getFlavour().equals(wantedFlavour.getFlavour()))
 			{
-				x += "\n" + s.toString();
+				x = "" + a.toString();
 				return x;
 			}
 		}
@@ -50,46 +46,44 @@ public class StoreStock{
 	public String searchBrand(Supplement wantedBrand)
 	{
 		String x = "";
-		Iterator i = stock.iterator();
-		while(i.hasNext())
+
+		for(Supplement a:stock)
 		{
-			Supplement s = (Supplement)i.next();
-			if(s.getBrand().equals(wantedBrand.getBrand()))
+			if(a.getBrand().equals(wantedBrand.getBrand()))
 			{
-				x += "\n" + s.toString();
+				x = "" + a.toString();
 				return x;
 			}
 		}
-		return "Brand of Supplement not Found";
+		return x;
+		//return "Brand of Supplement not Found";
 	}
 	public String searchType(Supplement wantedType)
 	{
 		String x = "";
-		Iterator i = stock.iterator();
-		while(i.hasNext())
+		for(Supplement a:stock)
 		{
-			Supplement s = (Supplement)i.next();
-			if(s.getType().equals(wantedType.getType()))
+			if(a.getType().equals(wantedType.getType()))
 			{
-				x += "\n" + s.toString();
+				x = "" + a.toString();
 				return x;
 			}
 		}
+
 		return "Type of Supplement not Found";
 	}
 	public String searchFunction(Supplement wantedFunction)
 	{
 		String x = "";
-		Iterator i = stock.iterator();
-		while(i.hasNext())
+		for(Supplement a:stock)
 		{
-			Supplement s = (Supplement)i.next();
-			if(s.getType().equals(wantedFunction.getType()))
+			if(a.getFunction().equals(wantedFunction.getFunction()))
 			{
-				x += "\n" + s.toString();
+				x = "" + a.toString();
 				return x;
 			}
 		}
+
 		return "Type of Function not Found";
 	}
 

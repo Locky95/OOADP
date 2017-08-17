@@ -19,6 +19,12 @@ public class Store
         Supplement supplementWanted = new Supplement();
         brand = JOptionPane.showInputDialog("select brand? ");
         supplementWanted.setBrand(brand);
-        store.searchBrand(supplementWanted);
+
+        //manual testing to see if the brand name for the searched supplement has been changed
+        String b = supplementWanted.getBrand();
+        JOptionPane.showMessageDialog(null,b);
+
+        String y = store.searchBrand(supplementWanted);
+        JOptionPane.showMessageDialog(null, y);
     }
 }
