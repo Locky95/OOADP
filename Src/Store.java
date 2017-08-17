@@ -20,10 +20,6 @@ public class Store
         brand = JOptionPane.showInputDialog("select brand? ");
         supplementWanted.setBrand(brand);
 
-        //manual testing to see if the brand name for the searched supplement has been changed
-        String b = supplementWanted.getBrand();
-        JOptionPane.showMessageDialog(null,b);
-
         String y = store.searchBrand(supplementWanted);
         JOptionPane.showMessageDialog(null, y);
     }
