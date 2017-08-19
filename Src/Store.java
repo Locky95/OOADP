@@ -12,10 +12,10 @@ public class Store
         StoreStock store = new StoreStock();
         //adding stock to the stock file
 
-        store.addStock(00001,"Strawberry ", "Protein ", Brand.HPNUTRITION, "Muscle Builder");
-        store.addStock(00002,"Chocalate ", "Protein ", Brand.MAXINUTRITION, "Muscle Builder");
-        store.addStock(00003,"Sour Apples ", "Creatine ", Brand.MYPROTEIN, "Performance");
-        store.addStock(00004,"UnFlavoured ", "Caffeine Tablets ", Brand.PHD, "Fat Loss");
+        store.addStock(00001,"Strawberry ", "Protein ", Brand.HPNUTRITION, "Muscle Builder", 17.00f);
+        store.addStock(00002,"Chocalate ", "Protein ", Brand.MAXINUTRITION, "Muscle Builder", 22.00f);
+        store.addStock(00003,"Sour Apples ", "Creatine ", Brand.MYPROTEIN, "Performance", 12.00f);
+        store.addStock(00004,"UnFlavoured ", "Caffeine Tablets ", Brand.PHD, "Fat Loss", 19.00f);
 
         Supplement supplementWanted = new Supplement();
         //brand = JOptionPane.showInputDialog("select brand? ");

@@ -7,21 +7,23 @@
 	//each supplement will have a flavour
 	//there will be different types of supplements ie. fat burners,weight gainers, creatine, protein powders
 	//different supplements will serve different functions ie. Muscle building, Weight Loss, Performance etc etc
- 	int ProductCode;
- 	String Flavour, Type, Function;
+ 	 int ProductCode;
+	 double price;
+ 	 String Flavour, Type, Function;
 	 Brand brand;
 
  	public Supplement()
 	{
 
 	}
- 	public Supplement(int ProductCode, String Flavour, String Type, Brand Brand, String Function)
+ 	public Supplement(int ProductCode, String Flavour, String Type, Brand Brand, String Function,double price)
  	{
  		setProductCode(ProductCode);
  		setFlavour(Flavour);
  		setType(Type);
  		setBrand(Brand);
  		setFunction(Function);
+		setPrice(price);
  	}
  	
  	public void setProductCode(int ProductCode)
@@ -44,7 +46,6 @@
  	{
  		this.Function = Function;
  	}
-
  	public int getProductCode()
  	{
  		return ProductCode;
@@ -65,6 +66,14 @@
  	{
  		return Function;
  	}
+
+	 public double getPrice() {
+		 return price;
+	 }
+
+	 public void setPrice(double price) {
+		 this.price = price;
+	 }
  }
 
 
