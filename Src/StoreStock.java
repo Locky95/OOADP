@@ -15,7 +15,7 @@ public class StoreStock{
  	{
 
  	}
- 	public void addStock(int ProductCode,String Flavour,String Type,Brand Brand,String Function)
+ 	public void addStock(final int ProductCode,String Flavour,String Type,Brand Brand,String Function)
  	{
  		Supplement supplement = new Supplement(ProductCode, Flavour, Type, Brand, Function);
 		stock.add(supplement);
