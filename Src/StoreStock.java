@@ -8,12 +8,14 @@ import java.util.LinkedList;
 public class StoreStock{
  	
  	private LinkedList<Supplement> stock = new LinkedList<Supplement>();
+
+	Brand brand;
  	
  	public StoreStock()
  	{
 
  	}
- 	public void addStock(int ProductCode,String Flavour,String Type,String Brand,String Function)
+ 	public void addStock(int ProductCode,String Flavour,String Type,Brand Brand,String Function)
  	{
  		Supplement supplement = new Supplement(ProductCode, Flavour, Type, Brand, Function);
 		stock.add(supplement);
@@ -49,7 +51,7 @@ public class StoreStock{
 
 		for(Supplement a:stock)
 		{
-			if(a.getBrand().equals(wantedBrand.getBrand()))
+			if(a.getBrand() == wantedBrand.getBrand())
 			{
 				x = "" + a.toString();
 				return x;
