@@ -32,11 +32,11 @@
  	}
  	public void setFlavour(String Flavour)
  	{
- 		this.Flavour = Flavour;
+ 		this.Flavour = Flavour.toUpperCase();
  	}
  	public void setType(String Type)
  	{
- 		this.Type = Type;
+ 		this.Type = Type.toUpperCase();
  	}
  	public void setBrand(Brand Brand)
  	{
@@ -44,7 +44,7 @@
  	}
  	public void setFunction(String Function)
  	{
- 		this.Function = Function;
+ 		this.Function = Function.toUpperCase();
  	}
  	public int getProductCode()
  	{
