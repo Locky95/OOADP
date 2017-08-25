@@ -10,7 +10,7 @@ public class Store
         final int productCode;
 
         StoreStock store = new StoreStock();
-        //adding stock to the stock file
+
 
         store.addStock(00001,"Strawberry ", "Protein ", Brand.HPNUTRITION, "Muscle Builder", 17.00f);
         store.addStock(00002,"Chocalate ", "Protein ", Brand.MAXINUTRITION, "Muscle Builder", 22.00f);
@@ -18,7 +18,6 @@ public class Store
         store.addStock(00004,"UnFlavoured ", "Caffeine Tablets ", Brand.PHD, "Fat Loss", 19.00f);
 
         Supplement supplementWanted = new Supplement();
-        //brand = JOptionPane.showInputDialog("select brand? ");
         brand = Brand.valueOf("select brand");
         supplementWanted.setBrand(brand);
 

@@ -1,7 +1,4 @@
-/* A stock file class to act like an inventory,
- * all the items that are in the supplement store are in it
- * itll be used to search for an item that the customer is searching for
- */
+
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -58,7 +55,7 @@ public class StoreStock{
 			}
 		}
 		return x;
-		//return "Brand of Supplement not Found";
+
 	}
 	public String searchType(Supplement wantedType)
 	{

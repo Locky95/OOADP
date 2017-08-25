@@ -1,12 +1,7 @@
-/*class for my project, should be for each different type of supplement
- *each instance of the class should have a product code, flavour, name, brand and function
- *ie. "123456, Chocalate, protein, HpNutrition, MuscleBuilder" */
+
  
  public class Supplement {
- 	//each item will have a product code unique to that product
-	//each supplement will have a flavour
-	//there will be different types of supplements ie. fat burners,weight gainers, creatine, protein powders
-	//different supplements will serve different functions ie. Muscle building, Weight Loss, Performance etc etc
+
  	 int ProductCode;
 	 double price;
  	 String Flavour, Type, Function;
